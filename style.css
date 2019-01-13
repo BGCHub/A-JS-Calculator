@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/* CSS Document */
+*{ padding: 0; margin: 0; }
+
+body{
+	background: #ffffff;
+}
+
+html{
+	font-size: 16px;
+}
+
+@media screen and (min-width:320px) and (max-width:370px){
+	html{
+		font-size: 10px;
+	}
+}
+
+@media screen and (min-width:370px) and (max-width:420px){
+	html{
+		font-size: 14px;
+	}
+}
+
+.wrapper{
+	width: 26.5rem;
+	height: 36rem;
+	background: #FFFFFF;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 26% 18.5% 18.5% 18.5% 18.5%;
+	border: 2px solid #e8e8e8;
+	border-radius: 1%
+}
+.item{
+	background: #f5f5f5;
+	border: 2px solid #f5f5f5;
+	border-radius: 15%;
+	margin: 0.125rem;
+	font-size: 3.75rem;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+.item:hover{
+	background: #FCAD3E;
+	transition: background 0.4s;
+}
+
+.monitor{
+	grid-column: 1/5;
+	grid-row: 1/2;
+	border: none;
+	border-bottom: 0.25rem solid #FCAD3E;
+	border-radius: 0%;
+	display: flex;
+	justify-content: flex-end;
+	align-items:center;
+	padding-right: 1rem;
+	font-size: 5rem;
+}
+.monitor:hover{
+	background: #f5f5f5;
+}
+.clean{
+	grid-column: 1/2;
+	grid-row: 1/2;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	font-size: 3.125rem;
+	color: #d4d4d4;
+}
+.clean:hover{
+	color: #f09381;
+}
+.nine{
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+.eight{
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+.seven{
+	grid-column: 3/4;
+	grid-row: 2/3;
+}
+.six{
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
+.five{
+	grid-column: 2/3;
+	grid-row: 3/4;
+}
+.four{
+	grid-column: 3/4;
+	grid-row: 3/4;
+}
+.three{
+	grid-column: 1/2;
+	grid-row: 4/5;
+}
+.two{
+	grid-column: 2/3;
+	grid-row: 4/5;
+}
+.one{
+	grid-column: 3/4;
+	grid-row: 4/5;
+}
+.dot{
+	grid-column: 1/2;
+	grid-row: 5/6;
+}
+.zero{
+	grid-column: 2/3;
+	grid-row: 5/6;
+}
+.equal{
+	grid-column: 3/4;
+	grid-row: 5/6;
+}
+.equal::before,.equal::after{
+	content: " ";
+	position: absolute;
+	width: 1.5625rem;
+}
+.equal::before{
+	border-bottom: 0.1875rem solid;
+	margin-top: 0.625rem;
+}
+.equal::after{
+	border-top: 0.1875rem solid;
+}
+.equal:hover{
+	background: #5cff5c;
+}
+
+.add{
+	grid-column: 4/5;
+	grid-row: 2/3;
+}
+.add::before,.add::after{
+	content: " ";
+	position: absolute
+}
+.add::before{
+	border-bottom: 0.1875rem solid;
+	width: 2.1875rem;
+}
+.add::after{
+	border-left: 0.1875rem solid;
+	height: 2.1875rem;
+}
+
+.minus{
+	grid-column: 4/5;
+	grid-row: 3/4;
+}
+.minus::before{
+	content: " ";
+	position: absolute;
+	border-bottom: 0.1875rem solid;
+	width: 2.1875rem;
+}
+
+.time{
+	grid-column: 4/5;
+	grid-row: 4/5;
+}
+.time::before,.time::after{
+	content: " ";
+	position: absolute;
+	transform: rotate(45deg);
+}
+.time::before{
+	border-bottom: 0.1875rem solid;
+	width: 2.1875rem;
+}
+.time::after{
+	border-left: 0.1875rem solid;
+	height: 2.1875rem;
+}
+
+.divide{
+	grid-column: 4/5;
+	grid-row: 5/6;
+}
+.divide::before,.divide::after{
+	content: " ";
+	position: absolute;
+	width: 1.5625rem;
+}
+.divide::before{
+	border-bottom: 0.47rem dotted;
+	transform: rotate(90deg);
+}
+.divide::after{
+	border-bottom: 0.1875rem solid;
+}
+
+.operation:hover{
+	background: #65e5ff;
+}
+
