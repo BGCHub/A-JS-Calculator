@@ -15,6 +15,8 @@ window.onload=function(){
 	var isCalculate=false;
 	var isAdd=false,isMinus=false,isTime=false,isDivide=false;
 	
+	var fff="";
+	
 	for(let i=0;i<10;i++){
 		buttons[i].onclick=function(){
 			if(isFirst){
@@ -26,6 +28,13 @@ window.onload=function(){
 					ss=buttons[i].innerHTML;
 					s=s+ss;
 					mon.innerHTML=s;
+				} else{
+					mon.style.borderBottomColor="#FCAD3E";
+					f="";
+					ff=buttons[i].innerHTML;
+					fff=fff+ff;
+					mon.innerHTML=fff;
+					f=fff;
 				}
 			}
 		}
@@ -77,13 +86,19 @@ window.onload=function(){
 			e=f/s;
 		}
 		
+		if(e>9999999 ||e<-999999){
+			e="Error!"
+			mon.style.borderBottomColor="#f09381";
+		}
+		
 		f=e;
 		s="";
+		fff="";
 		isAdd=false;
 		isMinus=false;
 		isTime=false;
 		isDivide=false;
-		
+		isCalculate=false
 		mon.innerHTML=e;
 	}
 	
@@ -98,6 +113,7 @@ window.onload=function(){
 		ff=0;
 		f="";
 		s="";
+		e=0;
 		isFirst=true;
 		isCalculate=false;
 		isAdd=false;
