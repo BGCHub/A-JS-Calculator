@@ -44,6 +44,7 @@ html{
 	display: flex;
 	justify-content: center;
 	align-items:center;
+	min-height: calc(100vh - 40px);
 }
 
 .wrapper{
@@ -227,5 +228,11 @@ html{
 
 .operation:hover{
 	background: #65e5ff;
+}
+
+.intro{
+	display: none;
+	position: absolute;
+	font-family: "Courgette";
 }
 
