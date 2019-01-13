@@ -22,8 +22,14 @@ html{
 	}
 }
 
+@media screen and (min-width:420px){
+	.wrapper{
+		width: 26.5rem;
+	}
+}
+
 .wrapper{
-	width: 26.5rem;
+	width: 98%;
 	height: 36rem;
 	background: #FFFFFF;
 	display: grid;
