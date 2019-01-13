@@ -40,6 +40,12 @@ html{
 	}
 }
 
+.container{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+
 .wrapper{
 	width: 26.5rem;
 	height: 36rem;
