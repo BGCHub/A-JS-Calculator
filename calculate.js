@@ -68,10 +68,23 @@ window.onload=function(){
 		mon.style.borderBottomColor="#65e5ff";
 	}
 	
+	dotte.onclick=function(){
+		if(isFirst){
+			f=f+".";
+		} else{
+			if(isCalculate){
+				s=s+".";
+			} else{
+				fff=fff+".";
+			}
+		}
+		mon.innerHTML=mon.innerHTML+".";
+	}
+	
 	equaee.onclick=function(){
-		mon.style.borderBottomColor="#5cff5c";
-		f=parseInt(f);
-		s=parseInt(s);
+		mon.style.borderBottomColor="#a9ffa9";
+		f=parseFloat(f);
+		s=parseFloat(s);
 		
 		if(isAdd){
 			e=f+s;

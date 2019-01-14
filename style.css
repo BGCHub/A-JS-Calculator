@@ -61,7 +61,7 @@ html{
 .item{
 	background: #f5f5f5;
 	border: 2px solid #f5f5f5;
-	border-radius: 15%;
+/*	border-radius: 15%;*/
 	margin: 0.125rem;
 	font-size: 3.75rem;
 	display: flex;
@@ -69,7 +69,7 @@ html{
 	align-items:center;
 }
 .item:hover{
-	background: #FCAD3E;
+	background: #e8e8e8;
 	transition: background 0.4s;
 }
 
@@ -160,9 +160,6 @@ html{
 .equal::after{
 	border-top: 0.1875rem solid;
 }
-.equal:hover{
-	background: #5cff5c;
-}
 
 .add{
 	grid-column: 4/5;
@@ -227,14 +224,10 @@ html{
 	border-bottom: 0.1875rem solid;
 }
 
-.operation:hover{
-	background: #65e5ff;
-}
-
 .intro{
 	font-family: "Courgette";
 	margin-top: 2.5rem;
-	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 33.3%, rgba(252,176,69,1) 66.6%, rgba(131,58,180,1) 100%);
+	background: linear-gradient(90deg, #fcb857 0%, #fdc270 33.3%, #fdcd89 66.6%, #fcad3e 100%);
 	-webkit-background-clip: text; /*截取背景区域为文字*/
 	color: transparent;
 	background-size: 300% 100%; /*扩大背景区域*/	
