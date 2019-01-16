@@ -1,4 +1,5 @@
 window.onload=function(){
+	// get buttons
 	var buttons=document.getElementsByClassName("item");
 	var mon=document.getElementById("monitor");
 	var dotte=document.getElementById("dot");
@@ -9,14 +10,12 @@ window.onload=function(){
 	var equaee=document.getElementById("equal");
 	var cleaner=document.getElementById("clean");
 	
-	var f="",s="",e=0; //f to store the first number, s to store the second number, e to store the final result
-	var ss=0,ff=0;
-	var isFirst=true;
-	var isCalculate=false;
-	var isAdd=false,isMinus=false,isTime=false,isDivide=false;
-	
-	var fff="";
-	
+	var f="",s="",e=0; // f to store the first number, s to store the second number, e to store the final result
+	var ss=0,ff=0,fff=""; // temporary values
+	var isFirst=true; // determine whether is the first calculation
+	var isCalculate=false; // determine whether is calculated
+	var isAdd=false,isMinus=false,isTime=false,isDivide=false; // determine which operation is executed
+
 	for(let i=0;i<10;i++){
 		buttons[i].onclick=function(){
 			if(isFirst){
@@ -67,7 +66,7 @@ window.onload=function(){
 		isFirst=false;
 		mon.style.borderBottomColor="#65e5ff";
 	}
-	
+	// add dot to the integer
 	dotte.onclick=function(){
 		if(isFirst){
 			f=f+".";
@@ -99,7 +98,7 @@ window.onload=function(){
 			e=f/s;
 		}
 		
-		if(e>9999999 ||e<-999999){
+		if(e>9999999 ||e<-999999||isNaN(e)){
 			e="Error!"
 			mon.style.borderBottomColor="#f09381";
 		}
@@ -121,6 +120,7 @@ window.onload=function(){
 	cleaner.onmouseup=function(){
 		mon.style.borderBottomColor="#FCAD3E";
 	}
+	// initialize every value
 	cleaner.onclick=function(){
 		ss=0;
 		ff=0;
