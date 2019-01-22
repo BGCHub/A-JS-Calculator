@@ -21,11 +21,13 @@ window.onload=function(){
 			if(isFirst){
 				ff=buttons[i].innerHTML;
 				f=f+ff;
+				f=f.substring(7,0);
 				mon.innerHTML=f;
 			} else{
 				if(isCalculate){
 					ss=buttons[i].innerHTML;
 					s=s+ss;
+					s=s.substring(7,0);
 					mon.innerHTML=s;
 				} else{
 					mon.style.borderBottomColor="#FCAD3E";
@@ -102,6 +104,8 @@ window.onload=function(){
 			e="Error!"
 			mon.style.borderBottomColor="#f09381";
 		}
+		e=e.toString();
+		e=e.substring(7,0);
 		
 		f=e;
 		s="";

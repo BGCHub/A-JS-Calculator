@@ -16,7 +16,7 @@ html{
 	background: #FFFFFF;
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
-	grid-template-rows: 26% 18.5% 18.5% 18.5% 18.5%;
+	grid-template-rows: 30% 17.5% 17.5% 17.5% 17.5%;
 }
 
 .item{
