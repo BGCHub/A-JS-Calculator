@@ -16,7 +16,7 @@ window.onload=function(){
 	var isCalculate=false; // determine whether is calculated
 	var isAdd=false,isMinus=false,isTime=false,isDivide=false; // determine which operation is executed
 
-	// slide to delate
+	// slide to delete
 	var startPoint = null;
     mon.addEventListener("touchstart",function(e){
         var e = e||window.event;
