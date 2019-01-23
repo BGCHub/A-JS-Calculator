@@ -45,10 +45,52 @@ html{
 	align-items:center;
 	padding-right: 1rem;
 	font-size: 5rem;
+	transition: border-bottom 0.3s;
+	animation: monitor 1.5s linear 0s 1 normal forwards;
+}
+
+@keyframes monitor{
+	0% {
+		color: #f5f5f5;
+	}
+	99% {
+		color: #f5f5f5;
+	}
+	100% {
+		color: #000000;
+	}
 }
 
 .monitor:hover{
 	background: #f5f5f5;
+}
+
+.tip{
+	grid-column: 1/5;
+	grid-row: 1/2;
+	font-size: 1.4rem;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	animation: tip 1.5s linear 0s 1 normal forwards;
+
+}
+
+@keyframes tip{
+	0% {
+		font-size: 1.4rem;
+		color: #f5f5f5;
+	}
+	50% {
+		font-size: 2.9rem;
+	}
+	99.99% {
+		font-size: 2.9rem;
+		color: #868686;
+	}
+	100% {
+		font-size: 0;
+	}
 }
 
 .clean{
@@ -57,8 +99,21 @@ html{
 	display: flex;
 	justify-content: center;
 	align-items:center;
-	font-size: 3.125rem;
 	color: #d4d4d4;
+	font-size: 3.125rem;
+	animation: clean 1.5s linear 0s 1 normal;
+}
+
+@keyframes clean{
+	0% {
+		color: #f5f5f5;
+	}
+	99% {
+		color: #f5f5f5;
+	}
+	100% {
+		color: #d4d4d4;
+	}
 }
 
 .clean:hover{
@@ -230,7 +285,11 @@ html{
 
 @media screen and (min-width:800px){
 	html{
-		font-size: 20px;
+		font-size: 18px;
+	}
+
+	.tip{
+		display: none;
 	}
 
 	.container{
@@ -241,8 +300,8 @@ html{
 	}
 
 	.wrapper{
-		width: 26.5rem;
-		height: 36rem;
+		width: 26rem;
+		height: 35rem;
 		margin-top: 3rem;
 		border: 2px solid #e8e8e8;
 		border-radius: 1%;

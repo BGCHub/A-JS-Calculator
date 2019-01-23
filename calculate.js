@@ -149,11 +149,13 @@ window.onload=function(){
 		mon.innerHTML=e;
 	}
 	
-	cleaner.onmousedown=function(){
+	cleaner.ontouchstart=function(){
 		mon.style.borderBottomColor="#f09381";
+		cleaner.style.color="#f09381";
 	}
-	cleaner.onmouseup=function(){
+	cleaner.ontouchend=function(){
 		mon.style.borderBottomColor="#FCAD3E";
+		cleaner.style.color="#d4d4d4";
 	}
 	// initialize every value
 	cleaner.onclick=function(){
