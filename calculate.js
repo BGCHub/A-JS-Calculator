@@ -16,6 +16,37 @@ window.onload=function(){
 	var isCalculate=false; // determine whether is calculated
 	var isAdd=false,isMinus=false,isTime=false,isDivide=false; // determine which operation is executed
 
+	// slide to delate
+	var startPoint = null;
+    mon.addEventListener("touchstart",function(e){
+        var e = e||window.event;
+        startPoint = e.touches[0];
+    });
+    mon.addEventListener("touchend",function(e){
+        var e=e||window.event;
+        var endPoint = e.changedTouches[0];
+        var x = endPoint.clientX - startPoint.clientX;
+        var d = 10; // initialize slide distance
+        if(Math.abs(x)>d){
+            if(x<=0){
+                console.log("left");
+                mon.innerHTML=f;
+                if(isFirst){
+					f=f.substring(f.length-1,0);
+					mon.innerHTML=f;
+				} else{
+					if(isCalculate){
+						s=s.substring(s.length-1,0);
+						mon.innerHTML=s;
+					} else{
+						fff=fff.substring(fff.length-1,0);
+						mon.innerHTML=fff;
+					}
+				}
+            }
+        }
+    });
+
 	for(let i=0;i<10;i++){
 		buttons[i].onclick=function(){
 			if(isFirst){
