@@ -52,7 +52,7 @@ window.onload=function(){
 			if(isFirst){
 				ff=buttons[i].innerHTML;
 				f=f+ff;
-				f=f.substring(7,0);
+				f=f.substring(7,0); // restrict number
 				mon.innerHTML=f;
 			} else{
 				if(isCalculate){

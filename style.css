@@ -2,18 +2,12 @@
 /* CSS Document */
 *{ padding: 0; margin: 0; }
 
-body{
-	background: #ffffff;
-}
-
 html{
 	font-size: 16px;
 }
 
 .wrapper{
-	width: 100%;
 	height: 100vh;
-	background: #FFFFFF;
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: 30% 17.5% 17.5% 17.5% 17.5%;
@@ -31,7 +25,6 @@ html{
 
 .item:hover{
 	background: #e8e8e8;
-	transition: background 0.4s;
 }
 
 .monitor{
@@ -39,7 +32,6 @@ html{
 	grid-row: 1/2;
 	border: none;
 	border-bottom: 0.25rem solid #FCAD3E;
-	border-radius: 0%;
 	display: flex;
 	justify-content: flex-end;
 	align-items:center;
@@ -50,15 +42,9 @@ html{
 }
 
 @keyframes monitor{
-	0% {
-		color: #f5f5f5;
-	}
-	99% {
-		color: #f5f5f5;
-	}
-	100% {
-		color: #000000;
-	}
+	0% {color: #f5f5f5;}
+	99% {color: #f5f5f5;}
+	100% {color: #000000;}
 }
 
 .monitor:hover{
@@ -105,15 +91,9 @@ html{
 }
 
 @keyframes clean{
-	0% {
-		color: #f5f5f5;
-	}
-	99% {
-		color: #f5f5f5;
-	}
-	100% {
-		color: #d4d4d4;
-	}
+	0% {color: #f5f5f5;}
+	99% {color: #f5f5f5;}
+	100% {color: #d4d4d4;}
 }
 
 .clean:hover{
@@ -164,19 +144,24 @@ html{
 	grid-column: 2/3;
 	grid-row: 5/6;
 }
+
 .equal{
 	grid-column: 3/4;
 	grid-row: 5/6;
 }
+
+/* equal sign icon */
 .equal::before,.equal::after{
 	content: " ";
 	position: absolute;
 	width: 1.5625rem;
 }
+
 .equal::before{
 	border-bottom: 0.1875rem solid;
 	margin-top: 0.625rem;
 }
+
 .equal::after{
 	border-top: 0.1875rem solid;
 }
@@ -185,23 +170,29 @@ html{
 	grid-column: 4/5;
 	grid-row: 2/3;
 }
+
+/* plus sign icon */
 .add::before,.add::after{
 	content: " ";
 	position: absolute
 }
+
 .add::before{
 	border-bottom: 0.1875rem solid;
 	width: 2.1875rem;
 }
+
 .add::after{
 	border-left: 0.1875rem solid;
 	height: 2.1875rem;
 }
 
+/* minus sign icon */
 .minus{
 	grid-column: 4/5;
 	grid-row: 3/4;
 }
+
 .minus::before{
 	content: " ";
 	position: absolute;
@@ -213,15 +204,19 @@ html{
 	grid-column: 4/5;
 	grid-row: 4/5;
 }
+
+/* multiplication sign icon */
 .time::before,.time::after{
 	content: " ";
 	position: absolute;
 	transform: rotate(45deg);
 }
+
 .time::before{
 	border-bottom: 0.1875rem solid;
 	width: 2.1875rem;
 }
+
 .time::after{
 	border-left: 0.1875rem solid;
 	height: 2.1875rem;
@@ -231,32 +226,29 @@ html{
 	grid-column: 4/5;
 	grid-row: 5/6;
 }
+
+/* division symbol */
 .divide::before,.divide::after{
 	content: " ";
 	position: absolute;
 	width: 1.5625rem;
 }
+
 .divide::before{
 	border-bottom: 0.47rem dotted;
-	transform: rotate(90deg);
+	
 }
+
 .divide::after{
 	border-bottom: 0.1875rem solid;
 }
 
+/* introduction text, only in big screen */
 .intro{
 	font-family: "Courgette";
 	margin-top: 2.5rem;
-	background: linear-gradient(90deg, #fcb857 0%, #fdc270 33.3%, #fdcd89 66.6%, #fcad3e 100%);
-	-webkit-background-clip: text; /*截取背景区域为文字*/
-	color: transparent;
-	background-size: 300% 100%; /*扩大背景区域*/	
-	animation: text 4s infinite linear;
+	color: #fcb857;
 	display: none;
-}
-@keyframes text{
-	0%  { background-position: 0 0;}
-	100% { background-position: -150% 0;}
 }
 
 @media screen and (min-width:320px) and (max-width:370px){
