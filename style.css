@@ -231,16 +231,16 @@ html{
 .divide::before,.divide::after{
 	content: " ";
 	position: absolute;
-	width: 1.5625rem;
 }
 
 .divide::before{
-	border-bottom: 0.47rem dotted;
-	
+	border-left: 0.47rem dotted;
+	height: 1.45rem;
 }
 
 .divide::after{
 	border-bottom: 0.1875rem solid;
+	width: 1.5625rem;
 }
 
 /* introduction text, only in big screen */
