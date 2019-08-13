@@ -1,5 +1,5 @@
 # A javascript calculator
 
-Demo: [Calculator](https://bgchub.github.io/ajscalculator/calculator.html)
+Demo: [Calculator](https://bgchub.github.io/A-JS-Calculator/calculator.html)
 
 Grid display, Responsive
